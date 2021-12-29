@@ -1,0 +1,39 @@
+{
+  "translation" : {
+    "login" : "Login",
+    "create_new_user": "Create New User",
+    "create_new_product": "Create New Product",
+    "read_more" : "Read More",
+    "submit" : "Submit",
+    "to_cart" : "To cart",
+    "delete_product" : "DELETE PRODUCT",
+    "update_product" : "UPDATE PRODUCT"
+  },
+  "product": {
+    "name": "Product name",
+    "category" : "Category",
+    "description" : "Description",
+    "quantity" : "Quantity",
+    "price" : "Price"
+  },
+  "user": {
+    "username": "Username",
+    "name" : "Name",
+    "surname": "Surname",
+    "country": "Country",
+    "city" : "City",
+    "street" : "Street",
+    "zip_code" : "Zipcode",
+    "password" : "Password",
+    "repeate_password" : "Repeate Password"
+  },
+  "cart" : {
+    "sub_total": "Sub Total",
+    "name": "Name",
+    "category" : "Category",
+    "description" : "Description",
+    "quantity" : "Quantity",
+    "price" : "Price",
+    "basket_empty": "Basket is Empty"
+  }
+}

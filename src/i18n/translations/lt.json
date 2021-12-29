@@ -1,0 +1,40 @@
+{
+  "translation" : {
+    "login" : "Prisijungti",
+    "create_new_user": "Sukurti naują vartotoją",
+    "create_new_product": "Sukurti naują produktą",
+    "read_more" : "Skaityti daugiau",
+    "submit" : "Patvirtinti",
+    "to_cart" : "Į krepšelį",
+    "delete_product" : "IŠTRINTI PRODUKTĄ",
+    "update_product" : "ATNAUJINTI PRODUKTO DUOMENIS"
+
+  },
+  "product": {
+    "name": "Produkto vardas",
+    "category" : "Kategorija",
+    "description" : "Aprašymas",
+    "quantity" : "Kiekis",
+    "price" : "Kaina"
+  },
+  "user": {
+    "username": "Prisijungimo vardas",
+    "name" : "Vardas",
+    "surname": "Pavardė",
+    "country": "Šalis",
+    "city" : "Miestas",
+    "street" : "Gatvė",
+    "zip_code" : "Pašto kodas",
+    "password" : "Slaptažodis",
+    "repeate_password" : "Pakartokite slaptažodi"
+  },
+  "cart" : {
+    "sub_total": "Viso",
+    "name": "Vardas",
+    "category" : "Kategorija",
+    "description" : "Aprašymas",
+    "quantity" : "Kiekis",
+    "price" : "Kaina",
+    "basket_empty": "Krepšelis tuščias"
+  }
+}
