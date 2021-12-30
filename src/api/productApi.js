@@ -5,6 +5,7 @@ const createProducts = (data) => HTTP.post('/products', data);
 const getProductById = (id) => HTTP.get(`/products/${id}`);
 const updateProduct = (data) => HTTP.put(`/products`, data);
 const deleteProduct = (id) => HTTP.delete(`/products/${id}`);
+
 const uploadProductImage = (id, image) => {
     let data = new FormData();
     data.append('multipartFile', image, image.name);

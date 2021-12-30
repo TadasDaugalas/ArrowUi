@@ -65,7 +65,13 @@ const ReadMore = () => {
                                             {t('product:description')}
                                             {product.description}</Typography>
                                     </Box>
-                                    <Button sx={{mt: 3}} variant="contained" color="success"
+                                    <Box sx={{display: 'flex'}}>
+                                        <Typography variant={"h5"} sx={{m: 3, ml: 0}}>
+                                            {t('product:price')} :
+                                            {product.price} $</Typography>
+                                    </Box>
+
+                                    <Button variant="contained" color="success"
                                             onClick={() => onAddProduct(product)}>
                                         {t('translation:to_cart')}
                                     </Button>

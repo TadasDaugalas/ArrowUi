@@ -18,12 +18,14 @@ export default () => {
             <CssBaseline />
             <Routes>
                 <Route path="/" element={<Products/>}/>
-                <Route path="/products/create" element={<SecuredRoute/>}>
+                <Route path="/products/create" element={<SecuredRoute roles={['ADMIN']}/>}>
                     <Route path="/products/create" element={<Product/>}/>
                 </Route>
                 <Route path="/users/registration" element={<UserForm/>}>
                 </Route>
+                <Route path="/products/update/:productId"  element={<SecuredRoute roles={['ADMIN']}/>}>
                 <Route path="/products/update/:productId" element={<UpdateProduct/>}/>
+                </Route>
                 <Route path="/products/readMore/:productId" element={<ReadMore/>}/>
                 <Route path="/cart" element={<Cart/>}/>
                 <Route path="/login" element={<Login/>}/>
