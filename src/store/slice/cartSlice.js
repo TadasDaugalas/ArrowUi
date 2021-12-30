@@ -20,17 +20,17 @@ const cartSlice = createSlice({
         }
     }
 });
-let previousCart =[];
+let previousCart = [];
 const subscribeToStorage = (store) => {
-    store.subscribe(()=>{
+    store.subscribe(() => {
         const cart = store.getState().cart;
         if (previousCart !== cart) {
             addLocalStorage('cart', cart);
-            previousCart= cart;
+            previousCart = cart;
         }
     });
 }
-const loadCartFromLocalStorage = ()=> getLocalStorage('cart') || [];
+const loadCartFromLocalStorage = () => getLocalStorage('cart') || [];
 
 
 // const cartReducer = (state = [], action) => {
@@ -58,4 +58,4 @@ const loadCartFromLocalStorage = ()=> getLocalStorage('cart') || [];
 // const removeFromCart = (id) => ({type: REMOVE_FROM_CART, id});
 export default cartSlice.reducer;
 export const {addToCart, removeFromCart} = cartSlice.actions;
-export {subscribeToStorage,loadCartFromLocalStorage};
+export {subscribeToStorage, loadCartFromLocalStorage};

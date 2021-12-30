@@ -42,7 +42,7 @@ const footers = [
     },
 ];
 
-export default ()=> {
+export default () => {
     return (
         <Container
             maxWidth="md"
@@ -71,7 +71,7 @@ export default ()=> {
                     </Grid>
                 ))}
             </Grid>
-            <Copyright sx={{ mt: 5 }} />
+            <Copyright sx={{mt: 5}}/>
         </Container>
     )
 }

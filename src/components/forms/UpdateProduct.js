@@ -106,7 +106,8 @@ const UpdateProduct = () => {
                                                             placeholder={t('product:price')}/>
                                             {
                                                 props.isSubmitting ? <CircularProgress/> :
-                                                    <Button type="submit">{t('translation:submit')}</Button>
+                                                    <Button type="submit"
+                                                    >{t('translation:submit')}</Button>
                                             }
                                         </Form>
                                     </Paper>

@@ -14,8 +14,8 @@ import ReadMore from "../../page/ReadMore";
 export default () => {
     return (
         <>
-            <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
-            <CssBaseline />
+            <GlobalStyles styles={{ul: {margin: 0, padding: 0, listStyle: 'none'}}}/>
+            <CssBaseline/>
             <Routes>
                 <Route path="/" element={<Products/>}/>
                 <Route path="/products/create" element={<SecuredRoute roles={['ADMIN']}/>}>
@@ -23,8 +23,8 @@ export default () => {
                 </Route>
                 <Route path="/users/registration" element={<UserForm/>}>
                 </Route>
-                <Route path="/products/update/:productId"  element={<SecuredRoute roles={['ADMIN']}/>}>
-                <Route path="/products/update/:productId" element={<UpdateProduct/>}/>
+                <Route path="/products/update/:productId" element={<SecuredRoute roles={['ADMIN']}/>}>
+                    <Route path="/products/update/:productId" element={<UpdateProduct/>}/>
                 </Route>
                 <Route path="/products/readMore/:productId" element={<ReadMore/>}/>
                 <Route path="/cart" element={<Cart/>}/>

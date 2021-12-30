@@ -1,9 +1,8 @@
-
-const addLocalStorage = (key,value)=>{
-    localStorage.setItem(key,JSON.stringify(value))
+const addLocalStorage = (key, value) => {
+    localStorage.setItem(key, JSON.stringify(value))
 }
-const getLocalStorage = (key)=>{
+const getLocalStorage = (key) => {
     return JSON.parse(localStorage.getItem(key));
 }
 
-export {addLocalStorage , getLocalStorage}
+export {addLocalStorage, getLocalStorage}

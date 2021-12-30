@@ -64,56 +64,57 @@ export default () => {
 
     return (
         <Translation>
-            {(t)=>
-            <Formik initialValues={{
-                name: '',
-                category: '',
-                description: '',
-                quantity: '',
-                price: ''
-            }}
-                    onSubmit={onCreateProduct}
-                    validationSchema={validationSchema}>
-                {props => (
-                    <Container maxWidth="sm">
-                        <Paper elevation={3} sx={{p: 1}}>
-                            {
-                                notification.isVisible &&
-                                <Alert severity={notification.severity} sx={{width: '100%'}}>
-                                    {notification.message}
-                                </Alert>
-                            }
-                            <Form className="product-form">
-                                <TextFieldInput error={props.touched.name && !!props.errors.name}
-                                                fieldName="name"
-                                                label={t('product:name')}
-                                                placeholder={t('product:name')}/>
-                                <TextFieldInput error={props.touched.category && !!props.errors.category}
-                                                fieldName="category"
-                                                label={t('product:category')}/>
-                                <TextFieldInput error={props.touched.description && !!props.errors.description}
-                                                fieldName="description"
-                                                label={t('product:description')}
-                                                placeholder={t('product:description')}
-                                                multiline
-                                                rows={3}/>
-                                <TextFieldInput error={props.touched.quantity && !!props.errors.quantity}
-                                                fieldName="quantity"
-                                                label={t('product:quantity')}
-                                                placeholder={t('product:quantity')}/>
-                                <TextFieldInput error={props.touched.price && !!props.errors.price}
-                                                fieldName="price"
-                                                label={t('product:price')}
-                                                placeholder={t('product:price')}/>
-                                <UploadImages onImagesChanged={onImagesChanged}/>
+            {(t) =>
+                <Formik initialValues={{
+                    name: '',
+                    category: '',
+                    description: '',
+                    quantity: '',
+                    price: ''
+                }}
+                        onSubmit={onCreateProduct}
+                        validationSchema={validationSchema}>
+                    {props => (
+                        <Container maxWidth="sm">
+                            <Paper elevation={3} sx={{p: 1}}>
                                 {
-                                    props.isSubmitting ? <CircularProgress/> : <Button type="submit">{t('translation:submit')}</Button>
+                                    notification.isVisible &&
+                                    <Alert severity={notification.severity} sx={{width: '100%'}}>
+                                        {notification.message}
+                                    </Alert>
                                 }
-                            </Form>
-                        </Paper>
-                    </Container>
-                )}
-            </Formik>
+                                <Form className="product-form">
+                                    <TextFieldInput error={props.touched.name && !!props.errors.name}
+                                                    fieldName="name"
+                                                    label={t('product:name')}
+                                                    placeholder={t('product:name')}/>
+                                    <TextFieldInput error={props.touched.category && !!props.errors.category}
+                                                    fieldName="category"
+                                                    label={t('product:category')}/>
+                                    <TextFieldInput error={props.touched.description && !!props.errors.description}
+                                                    fieldName="description"
+                                                    label={t('product:description')}
+                                                    placeholder={t('product:description')}
+                                                    multiline
+                                                    rows={3}/>
+                                    <TextFieldInput error={props.touched.quantity && !!props.errors.quantity}
+                                                    fieldName="quantity"
+                                                    label={t('product:quantity')}
+                                                    placeholder={t('product:quantity')}/>
+                                    <TextFieldInput error={props.touched.price && !!props.errors.price}
+                                                    fieldName="price"
+                                                    label={t('product:price')}
+                                                    placeholder={t('product:price')}/>
+                                    <UploadImages onImagesChanged={onImagesChanged}/>
+                                    {
+                                        props.isSubmitting ? <CircularProgress/> :
+                                            <Button type="submit">{t('translation:submit')}</Button>
+                                    }
+                                </Form>
+                            </Paper>
+                        </Container>
+                    )}
+                </Formik>
             }
         </Translation>
     )

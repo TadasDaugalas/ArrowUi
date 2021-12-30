@@ -33,6 +33,7 @@ const ReadMore = () => {
             .then(({status}) => {
                 if (status === 204) {
                     setNotification({isVisible: true, message: 'Product deleted successfully', severity: 'success'});
+                    setTimeout(()=>null,1000);
                 }
             })
             .catch((error) => setNotification({isVisible: true, message: 'Something goes wrong', severity: 'error'}));
@@ -80,23 +81,23 @@ const ReadMore = () => {
                                         {
                                             user.roles.includes('ADMIN') &&
                                             <>
-                                                <Link
-                                                    variant="button"
-                                                    color="text.primary"
+                                                <Button
+                                                    variant="contained"
+                                                    color="error"
                                                     to={`/`}
                                                     sx={{my: 1, mx: 1.5}}
                                                     onClick={() => onDeleteProduct(product.id)}
                                                     component={NavLink}>
                                                     {t('translation:delete_product')}
-                                                </Link>
-                                                <Link
-                                                    variant="button"
-                                                    color="text.primary"
+                                                </Button>
+                                                <Button
+                                                    variant="contained"
+                                                    color="primary"
                                                     to={`/products/update/${product.id}`}
                                                     sx={{my: 1, mx: 1.5}}
                                                     component={NavLink}>
                                                     {t('translation:update_product')}
-                                                </Link>
+                                                </Button>
                                             </>
                                         }
                                     </>
